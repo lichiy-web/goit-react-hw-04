@@ -1,0 +1,16 @@
+.imageCard {
+    display: flex;
+    height: calc(100vh / 3 - var(--grid-gap));
+}
+
+.imageCard:hover {
+    cursor:zoom-in;
+}
+
+.preview {
+    height: 100%;
+}
+
+.previewImage {
+    height: 100%;
+}

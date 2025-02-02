@@ -30,7 +30,7 @@ function App() {
   const [currentImageItem, setCurrentImageItem] = useState({});
 
   const handleSubmit = e => {
-    console.log('handleSubmit is called...');
+    // console.log('handleSubmit is called...');
     e.preventDefault();
 
     const newQuery = e.target.elements.search.value;
@@ -105,13 +105,12 @@ function App() {
           There are no matches for your search query...
         </Notification>
       )}
-      {modalIsOpen && (
-        <ImageModal
-          isOpen={modalIsOpen}
-          onCloseModal={handleCloseModal}
-          currentImageItem={currentImageItem}
-        />
-      )}
+
+      <ImageModal
+        isOpen={modalIsOpen}
+        onCloseModal={handleCloseModal}
+        currentImageItem={currentImageItem}
+      />
     </div>
   );
 }

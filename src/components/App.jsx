@@ -105,12 +105,13 @@ function App() {
           There are no matches for your search query...
         </Notification>
       )}
-      <ImageModal
-        isOpen={modalIsOpen}
-        // onOpenModal={handleOpenModal}
-        onCloseModal={handleCloseModal}
-        currentImageItem={currentImageItem}
-      />
+      {modalIsOpen && (
+        <ImageModal
+          isOpen={modalIsOpen}
+          onCloseModal={handleCloseModal}
+          currentImageItem={currentImageItem}
+        />
+      )}
     </div>
   );
 }

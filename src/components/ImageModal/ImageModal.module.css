@@ -13,6 +13,8 @@
 .modalImageViewer::before {
     /* z-index: -1; */
     position: relative;
+    top:0;
+
     width: 200px;
     height: 200px;
     background-color: blueviolet;
@@ -32,6 +34,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgba(0, 0, 0, .6);
+    color: #ffffff;
+}
+
+.modalCloseBtn:hover,
+.modalCloseBtn:focus {
+    border: 0;
+    outline: 0;
+}
+
+.modalCloseBtn:hover {
+    scale: 1.1;
 }
 
 .modalImageWrap {

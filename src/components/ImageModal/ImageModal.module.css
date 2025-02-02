@@ -1,13 +1,24 @@
 .modalImageViewer {
-    width: 50vw;
+    max-width: 80vw;
     max-height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-    background-color: #888888;
+    /* background-color: #888888; */
     color: #ffffff;
+    /* filter: blur(5px); */
 }
+
+.modalImageViewer::before {
+    /* z-index: -1; */
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: blueviolet;
+    filter: blur(5px)
+}
+
 .modalCloseBtn{
     position: absolute;
     width: 2em;
@@ -24,10 +35,14 @@
 }
 
 .modalImageWrap {
-    height: 90%;
+    max-height: 70vh;
     display: block;
     object-fit: contain;
     flex-grow: 8;    
+}
+
+.modalImage {
+    max-height: 70vh;
 }
 
 .modalCaption {
@@ -35,14 +50,30 @@
     flex-direction: column;
     align-items: center;
     flex-grow: 2;
+    width: 100%;
 }
 .modalTitle {
+    font-size: 1.2em;
     text-align: center;
+    width: 100%;
+    padding: .5em;
 }
 .modalImageInfo {
     display: flex;
+    width: 100%;
     /* flex-direction: row; */
     /* justify-content: space-between; */
     align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 1.3em;
 }
 
+.modalImageLikes,
+.modalAuthorName,
+.modalAuthorLocation {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    gap: .5em;
+}

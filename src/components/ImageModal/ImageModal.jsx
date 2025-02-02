@@ -16,8 +16,8 @@ const customStyles = {
     // color: 'lightsteelblue',
   },
   overlay: {
-    backgroundColor: 'rgba(0,0,0, .5)',
-    filter: 'blur(5px)',
+    backgroundColor: 'rgba(0,0,0, .6)',
+    // filter: 'blur(5px)',
     zIndex: 0,
     // filter: 'blur(5px)',
   },

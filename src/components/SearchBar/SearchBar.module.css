@@ -8,6 +8,13 @@
     top: 0;
     padding: 0.5em 0;
     box-sizing: border-box;
+    animation: headerBackground 10s infinite alternate;
+}
+
+@keyframes headerBackground { 
+    from {background-position-y: 0%}
+    to {background-position-y: 100%}
+    
 }
 
 

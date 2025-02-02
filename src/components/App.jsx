@@ -15,10 +15,11 @@ import ImageModal from './ImageModal/ImageModal.jsx';
 // console.log('imageList => ', response.results);
 
 const defaultPerPage = 12;
+const firstPage = 1;
 
 function App() {
   const [images, setImages] = useState([]);
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(firstPage);
   const [perPage, setPerPage] = useState(defaultPerPage);
   const [query, setQuery] = useState('');
   const [isEmpty, setIsEmpty] = useState(false);
@@ -53,14 +54,11 @@ function App() {
   };
 
   const handleOpenModal = newImageItem => {
-    // setUrl(newImageItem.urls.full);
-    // console.log('handleOpenModal => newImageItem =>', newImageItem);
     setCurrentImageItem(newImageItem);
     setModalIsOpen(true);
   };
 
   const handleCloseModal = () => {
-    // setUrl('');
     setCurrentImageItem({});
     setModalIsOpen(false);
   };
@@ -71,14 +69,12 @@ function App() {
     findImages(query, page, perPage)
       .then(({ data }) => {
         const { results, total_pages } = data;
-        if (page === total_pages - 1) {
+        if (page === total_pages) {
           setIsLastPage(true);
         }
-        // console.log(data);
-        // console.log(`total_pages = ${total_pages}`, results);
         if (!results.length) {
           setIsEmpty(true);
-          setPage(1);
+          setPage(firstPage);
           setQuery('');
         }
         setImages(prev => [...prev, ...results]);

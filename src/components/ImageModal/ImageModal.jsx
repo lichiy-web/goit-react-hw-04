@@ -12,6 +12,14 @@ const customStyles = {
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
+    zIndex: 10000,
+    // color: 'lightsteelblue',
+  },
+  overlay: {
+    backgroundColor: 'rgba(0,0,0, .5)',
+    filter: 'blur(5px)',
+    zIndex: 0,
+    // filter: 'blur(5px)',
   },
 };
 

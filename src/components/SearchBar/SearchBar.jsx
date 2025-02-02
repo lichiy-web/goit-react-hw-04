@@ -28,7 +28,11 @@ const SearchBar = ({ onSubmit }) => {
             value={typingQuery}
           />
           {typingQuery !== '' && (
-            <button className={css.resetBtn} onClick={resetTypingQuery}>
+            <button
+              type="button"
+              className={css.resetBtn}
+              onClick={resetTypingQuery}
+            >
               <IoMdClose />
             </button>
           )}

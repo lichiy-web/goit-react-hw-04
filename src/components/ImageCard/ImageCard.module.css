@@ -2,11 +2,13 @@
     display: flex;
     height: calc(100vh / 3 - var(--grid-gap));
     box-shadow: 0 0 .5em #888888;
+    transition: transform .2s;
 }
 
 
 .imageCard:hover {
     cursor:zoom-in;
+    transform: scale(1.1);
 }
 
 .preview {

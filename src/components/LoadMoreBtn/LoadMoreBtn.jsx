@@ -1,9 +1,9 @@
 import css from './LoadMoreBtn.module.css';
 
-const LoadMoreBtn = ({ onLoadMore }) => {
+const LoadMoreBtn = ({ onLoadMore, isLoading }) => {
   return (
     <button className={css.loadMoreBtn} onClick={onLoadMore}>
-      Show more
+      {isLoading ? 'Loading...' : 'Show more'}
     </button>
   );
 };

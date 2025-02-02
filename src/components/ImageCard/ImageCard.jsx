@@ -1,22 +1,16 @@
 import css from './ImageCard.module.css';
 
-function normalizeAlt(slug) {
-  slug = slug.trim().split('-');
-  slug.pop();
-  slug[0] = slug[0].replace(/^\w/, m => m.toUpperCase());
-  return slug.join(' ');
-}
-
-const ImageCard = ({ imageItem: { slug, urls } }) => {
-  //   console.log(`slug = ${slug}`);
-  //   console.log('urls => ', urls);
+const ImageCard = ({ imageItem, onImageView }) => {
+  console.log('onImageView', onImageView);
+  const { urls, alt_description, color } = imageItem;
   return (
-    <li className={css.imageCard}>
+    <li className={css.imageCard} onClick={() => onImageView(urls.full)}>
       <div className={css.preview}>
         <img
           className={css.previewImage}
           src={urls.small}
-          alt={normalizeAlt(slug)}
+          alt={alt_description?.replace(/^\w/, m => m.toUpperCase())}
+          style={{ border: `2px solid ${color}` }}
         />
       </div>
     </li>

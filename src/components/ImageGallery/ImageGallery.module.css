@@ -11,5 +11,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: var(--grid-gap);
+    padding: 1em;
     /* flex-direction: row; */
 }

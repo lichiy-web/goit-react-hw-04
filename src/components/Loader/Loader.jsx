@@ -1,14 +1,14 @@
 import css from './Loader.module.css';
 import { RotatingLines } from 'react-loader-spinner';
 
-const Loader = ({ isLoading }) => {
+const Loader = ({ isLoading, strokeColor }) => {
   return (
-    <div>
+    <div className={css.loader}>
       <RotatingLines
         visible={isLoading}
-        height="96"
-        width="96"
-        color="grey"
+        height="100%"
+        width="100%"
+        strokeColor={strokeColor}
         strokeWidth="5"
         animationDuration="0.75"
         ariaLabel="rotating-lines-loading"

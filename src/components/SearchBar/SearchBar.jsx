@@ -6,6 +6,7 @@ import { IoMdClose } from 'react-icons/io';
 const SearchBar = ({ onSubmit }) => {
   const [typingQuery, setTypingQuery] = useState('');
   const handleChange = e => {
+    console.log('handleChange is called...');
     setTypingQuery(e.target.value);
   };
   const resetTypingQuery = () => {

@@ -19,8 +19,8 @@ Modal.setAppElement('#root');
 
 const ImageModal = ({ isOpen, onCloseModal, currentImageItem }) => {
   if (!isOpen) return;
-  console.log('ImageModal: currentImageItem=> ', currentImageItem);
-  console.log('ImageModal: isOpen=> ', isOpen);
+  // console.log('ImageModal: currentImageItem=> ', currentImageItem);
+  // console.log('ImageModal: isOpen=> ', isOpen);
   const { urls, alt_description } = currentImageItem;
   return (
     <div>

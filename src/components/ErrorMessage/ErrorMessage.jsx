@@ -1,6 +1,6 @@
 import css from './ErrorMessage.module.css';
 import errImg from '../../assets/img/fetchError01-transparent.png';
-console.log('img = ', errImg);
+// console.log('img = ', errImg);
 const ErrorMessage = () => {
   return (
     <div className={css.errorMessage}>

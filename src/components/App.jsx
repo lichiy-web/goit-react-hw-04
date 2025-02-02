@@ -54,7 +54,7 @@ function App() {
 
   const handleOpenModal = newImageItem => {
     // setUrl(newImageItem.urls.full);
-    console.log('handleOpenModal => newImageItem =>', newImageItem);
+    // console.log('handleOpenModal => newImageItem =>', newImageItem);
     setCurrentImageItem(newImageItem);
     setModalIsOpen(true);
   };

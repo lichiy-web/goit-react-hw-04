@@ -18,7 +18,7 @@ const defaultPerPage = 12;
 
 function App() {
   const [images, setImages] = useState([]);
-  const [page, setPage] = useState(0);
+  const [page, setPage] = useState(1);
   const [perPage, setPerPage] = useState(defaultPerPage);
   const [query, setQuery] = useState('');
   const [isEmpty, setIsEmpty] = useState(false);
@@ -78,7 +78,7 @@ function App() {
         // console.log(`total_pages = ${total_pages}`, results);
         if (!results.length) {
           setIsEmpty(true);
-          setPage(0);
+          setPage(1);
           setQuery('');
         }
         setImages(prev => [...prev, ...results]);

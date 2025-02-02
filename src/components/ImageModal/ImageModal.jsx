@@ -1,6 +1,8 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import css from './ImageModal.module.css';
 import Modal from 'react-modal';
+// import { Slide } from 'react-slideshow-image';
+// import 'react-slideshow-image/dist/styles.css';
 
 const customStyles = {
   content: {
@@ -15,10 +17,13 @@ const customStyles = {
 
 Modal.setAppElement('#root');
 
-const ImageModal = ({ isOpen, onCloseModal, url }) => {
+const ImageModal = ({ isOpen, onCloseModal, currentImageItem }) => {
+  if (!isOpen) return;
+  console.log('ImageModal: currentImageItem=> ', currentImageItem);
+  console.log('ImageModal: isOpen=> ', isOpen);
+  const { urls, alt_description } = currentImageItem;
   return (
     <div>
-      {/* <button onClick={onOpenModal}>Open Modal</button> */}
       <Modal
         isOpen={isOpen}
         // onAfterOpen={afterOpenModal}
@@ -26,9 +31,11 @@ const ImageModal = ({ isOpen, onCloseModal, url }) => {
         style={customStyles}
         contentLabel="Image Modal"
       >
-        {/* <button onClick={onCloseModal}>close</button>
-        <div>I am a modal</div> */}
-        <img src={url} alt="" className={css.imageViewer} />
+        <img
+          src={urls?.full}
+          alt={alt_description}
+          className={css.imageViewer}
+        />
       </Modal>
     </div>
   );

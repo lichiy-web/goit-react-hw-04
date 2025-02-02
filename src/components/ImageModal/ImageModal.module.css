@@ -1,4 +1,4 @@
 .imageViewer {
     width:auto;
-    height: 60vh;
+    max-height: 90vh;
 }

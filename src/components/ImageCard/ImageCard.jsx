@@ -1,10 +1,10 @@
 import css from './ImageCard.module.css';
 
 const ImageCard = ({ imageItem, onImageView }) => {
-  console.log('onImageView', onImageView);
+  // console.log('onImageView', onImageView);
   const { urls, alt_description, color } = imageItem;
   return (
-    <li className={css.imageCard} onClick={() => onImageView(urls.full)}>
+    <li className={css.imageCard} onClick={() => onImageView(imageItem)}>
       <div className={css.preview}>
         <img
           className={css.previewImage}

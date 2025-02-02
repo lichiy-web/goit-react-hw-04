@@ -26,7 +26,7 @@ function App() {
   const [isError, setIsError] = useState(false);
   const [isLastPage, setIsLastPage] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [url, setUrl] = useState('');
+  const [currentImageItem, setCurrentImageItem] = useState({});
 
   const handleSubmit = e => {
     console.log('handleSubmit is called...');
@@ -52,13 +52,16 @@ function App() {
     setPage(prev => prev + 1);
   };
 
-  const handleOpenModal = url => {
-    setUrl(url);
+  const handleOpenModal = newImageItem => {
+    // setUrl(newImageItem.urls.full);
+    console.log('handleOpenModal => newImageItem =>', newImageItem);
+    setCurrentImageItem(newImageItem);
     setModalIsOpen(true);
   };
 
   const handleCloseModal = () => {
-    setUrl('');
+    // setUrl('');
+    setCurrentImageItem({});
     setModalIsOpen(false);
   };
 
@@ -110,7 +113,7 @@ function App() {
         isOpen={modalIsOpen}
         // onOpenModal={handleOpenModal}
         onCloseModal={handleCloseModal}
-        url={url}
+        currentImageItem={currentImageItem}
       />
     </div>
   );

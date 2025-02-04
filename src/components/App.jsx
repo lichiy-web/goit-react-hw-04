@@ -50,6 +50,7 @@ function App() {
   };
 
   const handleLoadMore = () => {
+    setIsError(false);
     setPage(prev => prev + 1);
   };
 

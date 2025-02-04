@@ -41,6 +41,7 @@ function App() {
       return;
     }
     setPerPage(defaultPerPage);
+    setPage(firstPage);
     setIsLoading(false);
     setIsError(false);
     setIsEmpty(false);
